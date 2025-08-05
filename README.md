@@ -35,5 +35,33 @@ $theme: mat.m2-define-light-theme((
   padding: 0 24px;
   height: 48px;
 }
+
+
+/* チェックボックスサイズをM2相当に */
+::ng-deep .mat-mdc-checkbox .mat-mdc-checkbox-background {
+  width: 18px;
+  height: 18px;
+}
+
+/* 枠線を細く */
+::ng-deep .mat-mdc-checkbox .mat-mdc-checkbox-background {
+  border-width: 2px;
+}
+
+/* ラベルの位置とフォントサイズをM2風に */
+::ng-deep .mat-mdc-checkbox-label {
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 8px; /* M2風の余白 */
+}
+
+/* チェックマークカラーをM2テーマ色に */
+@use '@angular/material' as mat;
+$primary: mat.m2-define-palette(mat.$deep-purple-palette);
+
+::ng-deep .mat-mdc-checkbox.mat-accent .mat-mdc-checkbox-background {
+  background-color: mat.m2-get-color-from-palette($primary);
+  border-color: mat.m2-get-color-from-palette($primary);
+}
 ```
 
