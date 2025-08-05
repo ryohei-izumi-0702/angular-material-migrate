@@ -69,6 +69,12 @@ $primary: mat.m2-define-palette(mat.$deep-purple-palette);
 $primary: mat.m2-define-palette(mat.$deep-purple-palette);
 $checkmark-color: mat.m2-get-color-from-palette($primary, default-contrast);
 
+$checkmark-color: mat.m2-get-color-from-palette($primary, default-contrast);
+
+::ng-deep .mat-mdc-checkbox .mat-mdc-checkbox-checkmark-path {
+  stroke: $checkmark-color; /* チェックマーク線の色 */
+}
+
 ::ng-deep .mat-mdc-checkbox .mat-mdc-checkbox-checkmark-path {
   stroke: $checkmark-color; /* チェックマーク線の色 */
 }
