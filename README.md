@@ -115,5 +115,31 @@ $checkmark-color: mat.m2-get-color-from-palette($primary, default-contrast);
   --mdc-slider-hover-handle-color: #673ab7;
 }
 
+/* mat-slider の目盛り（tick marks）を非表示にしてM2風に */
+::ng-deep .mat-mdc-slider .mdc-slider__tick-marks {
+  display: none !important;
+}
+
+@use '@angular/material' as mat;
+$primary: mat.m2-define-palette(mat.$deep-purple-palette);
+
+/* M2風の mat-slider バー補正 */
+::ng-deep .mat-mdc-slider .mdc-slider__track {
+  height: 2px !important;         // M2の細さ
+  border-radius: 0 !important;    // M2では角丸なし
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track--active,
+::ng-deep .mat-mdc-slider .mdc-slider__track--inactive {
+  border-radius: 0 !important;    // セグメントの角丸も除去
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track--active {
+  background-color: mat.m2-get-color-from-palette($primary, 500) !important;
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track--inactive {
+  background-color: rgba(0, 0, 0, 0.26) !important;
+}
 ```
 
