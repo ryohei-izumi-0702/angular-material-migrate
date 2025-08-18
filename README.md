@@ -79,5 +79,41 @@ $checkmark-color: mat.m2-get-color-from-palette($primary, default-contrast);
   stroke: $checkmark-color; /* チェックマーク線の色 */
 }
 
+
+::ng-deep .mat-mdc-slider {
+  height: 2px; // M2相当の細いトラックにする
+  margin: 10px 0;
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track {
+  height: 2px;
+  background-color: mat.m2-get-color-from-palette($primary, 500);
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__thumb {
+  width: 12px;
+  height: 12px;
+  background-color: mat.m2-get-color-from-palette($primary, 500);
+  border: none;
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track--inactive {
+  background-color: rgba(0, 0, 0, 0.26); // M2っぽい非アクティブカラー
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__thumb:focus {
+  box-shadow: none; // M3特有の青いリングを無効に
+}
+
+## or
+
+::ng-deep .mat-mdc-slider {
+  --mdc-slider-handle-color: #673ab7;
+  --mdc-slider-track-active-color: #673ab7;
+  --mdc-slider-track-inactive-color: rgba(0, 0, 0, 0.26);
+  --mdc-slider-focus-handle-color: transparent;
+  --mdc-slider-hover-handle-color: #673ab7;
+}
+
 ```
 
