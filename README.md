@@ -170,5 +170,13 @@ $primary: mat.m2-define-palette(mat.$deep-purple-palette);
 ::ng-deep .mat-mdc-option.mat-mdc-selected:not(.mat-mdc-option-disabled) {
   background-color: mat.m2-get-color-from-palette($primary, 50);
 }
+
+.mat-mdc-option .mat-pseudo-checkbox {
+  display: none !important;
+}
+
+.mat-mdc-option .mat-pseudo-checkbox {
+  display: none !important;
+}
 ```
 
