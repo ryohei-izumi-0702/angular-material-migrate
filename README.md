@@ -141,5 +141,34 @@ $primary: mat.m2-define-palette(mat.$deep-purple-palette);
 ::ng-deep .mat-mdc-slider .mdc-slider__track--inactive {
   background-color: rgba(0, 0, 0, 0.26) !important;
 }
+
+/* mat-select を M2風に補正 */
+::ng-deep .mat-mdc-select {
+  padding: 0 12px;
+}
+
+::ng-deep .mat-mdc-select-trigger {
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+::ng-deep .mat-mdc-select .mat-mdc-select-arrow {
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+::ng-deep .mat-mdc-select-panel {
+  padding: 0;
+  font-size: 14px;
+}
+
+::ng-deep .mat-mdc-option {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+::ng-deep .mat-mdc-option.mat-mdc-selected:not(.mat-mdc-option-disabled) {
+  background-color: mat.m2-get-color-from-palette($primary, 50);
+}
 ```
 
