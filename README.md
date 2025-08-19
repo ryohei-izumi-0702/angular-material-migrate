@@ -178,5 +178,15 @@ $primary: mat.m2-define-palette(mat.$deep-purple-palette);
 .mat-mdc-option .mat-pseudo-checkbox {
   display: none !important;
 }
+
+::ng-deep mat-slider.min-thumb input[type="range"] {
+  &::-webkit-slider-thumb {
+    opacity: 0;
+  }
+
+  &::-moz-range-thumb {
+    opacity: 0;
+  }
+}
 ```
 
